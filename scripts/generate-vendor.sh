@@ -6,7 +6,7 @@
 
 set -e # fail on unhandled error
 set -u # fail on undefined variable
-#set -x # debug
+set -x # debug
 
 readonly SCRIPTS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 readonly REALPATH_SCRIPT="$SCRIPTS_DIR/realpath.sh"
@@ -70,7 +70,8 @@ verify_input() {
 get_device_codename() {
   local device=""
 
-  device=$(grep 'ro.product.device=' "$1" | cut -d '=' -f2 | \
+  # Use ro.build.product as ro.build.device does not exist in Q
+  device=$(grep 'ro.build.product=' "$1" | cut -d '=' -f2 | \
            tr '[:upper:]' '[:lower:]' || true)
   if [[ "$device" == "" ]]; then
     echo "[-] Device string not found"
@@ -82,7 +83,8 @@ get_device_codename() {
 get_vendor() {
   local vendor=""
 
-  vendor=$(grep 'ro.product.manufacturer=' "$1" | cut -d '=' -f2 | \
+  # Support both ro.product.manufacturer and ro.product.system.manufacturer
+  vendor=$(grep 'ro.product.*manufacturer=' "$1" | cut -d '=' -f2 | \
            tr '[:upper:]' '[:lower:]' || true)
   if [[ "$vendor" == "" ]]; then
     echo "[-] Device codename string not found"
@@ -93,7 +95,7 @@ get_vendor() {
 
 get_radio_ver() {
   local radio_ver=""
-  radio_ver=$(grep 'ro.build.expect.baseband' "$1" | cut -d '=' -f2 || true)
+  radio_ver=$(basename "$1"/radio-*.img | cut -d"." -f1 | cut -d"-" -f3- || true)
 
   # We allow empty radio version so that we can detect devices with no baseband
   echo "$radio_ver"
@@ -101,7 +103,7 @@ get_radio_ver() {
 
 get_bootloader_ver() {
   local bootloader_ver=""
-  bootloader_ver=$(grep 'ro.build.expect.bootloader' "$1" | cut -d '=' -f2 || true)
+  bootloader_ver=$(basename "$1"/bootloader-*.img | cut -d"." -f1 | cut -d"-" -f3- || true)
   if [[ "$bootloader_ver" == "" ]]; then
     echo "[-] Failed to identify bootloader version"
     abort 1
@@ -1139,8 +1141,8 @@ DEVICE=$(get_device_codename "$INPUT_DIR/system/build.prop")
 DEVICE_FAMILY="$(jqRawStrTop "device-family" "$CONFIG_FILE")"
 VENDOR=$(get_vendor "$INPUT_DIR/system/build.prop")
 VENDOR_DIR="$(jqRawStrTop "aosp-vendor-dir" "$CONFIG_FILE")"
-RADIO_VER=$(get_radio_ver "$INPUT_DIR/system/build.prop")
-BOOTLOADER_VER=$(get_bootloader_ver "$INPUT_DIR/system/build.prop")
+RADIO_VER=$(get_radio_ver "$INPUT_DIR/radio")
+BOOTLOADER_VER=$(get_bootloader_ver "$INPUT_DIR/radio")
 BUILD_ID=$(get_build_id "$INPUT_DIR/system/build.prop")
 if [[ "$EXTRA_IMGS_LIST" != "" ]]; then
   readarray -t EXTRA_IMGS < <(echo "$EXTRA_IMGS_LIST")

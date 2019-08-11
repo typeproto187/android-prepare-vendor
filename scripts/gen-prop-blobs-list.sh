@@ -40,7 +40,8 @@ verify_input() {
   # Also check that we don't have any pre-optimized apps in vendor image
   if [[ "$(find "$1" -name "*.odex" | wc -l | tr -d " ")" -ne 0 ]]; then
     echo "[!] Vendor partition contains pre-optimized bytecode - not supported yet"
-    abort 1
+    # TODO: need to figure out proper solution here to workaround this. VENDOR_SKIP_FILES was not working for me
+    # abort 1
   fi
 }
 
