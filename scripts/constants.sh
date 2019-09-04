@@ -85,6 +85,7 @@ declare -ra VENDOR_SKIP_FILES=(
   "bin/cplay"
   "bin/dumpsys"
   "bin/hostapd_cli"
+  "bin/misc_writer"
   "bin/hw/android.hardware.atrace@1.0-service"
   "etc/init/android.hardware.atrace@1.0-service.rc"
   "etc/vintf/manifest/android.hardware.atrace@1.0-service.xml"
@@ -379,6 +380,7 @@ declare -ra VENDOR_SKIP_FILES=(
   "lib64/libkeystore-wifi-hidl.so"
   "lib64/libwifi-hal.so"
   "lib64/nfc_nci_nxp.so"
+  "odm/etc/build.prop"
 )
 
 # Files to skip from vendor partition when parsing factory images (for naked config only)
