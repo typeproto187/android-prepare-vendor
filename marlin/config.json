@@ -629,7 +629,10 @@
           "libminui",
           "nanotool",
           "PresencePolling",
-          "RcsService"
+          "RcsService",
+          "libmm-qcamera",
+          "libsensorndkbridge",
+          "android.hardware.drm@1.2-service.clearkey"
         ],
         "new-modules": [],
         "dep-dso": [],
