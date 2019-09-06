@@ -95,7 +95,7 @@ get_vendor() {
 
 get_radio_ver() {
   local radio_ver=""
-  radio_ver=$(basename "$1"/radio-*.img | cut -d"." -f1 | cut -d"-" -f3- || true)
+  radio_ver=$(grep 'ro.build.expect.baseband' "$1/vendor/build.prop" | cut -d '=' -f2 || true)
 
   # We allow empty radio version so that we can detect devices with no baseband
   echo "$radio_ver"
@@ -103,7 +103,7 @@ get_radio_ver() {
 
 get_bootloader_ver() {
   local bootloader_ver=""
-  bootloader_ver=$(basename "$1"/bootloader-*.img | awk -F"bootloader-$2-" '{print $2}' | awk -F".img" '{print $1}' || true)
+  bootloader_ver=$(grep 'ro.build.expect.bootloader' "$1/vendor/build.prop" | cut -d '=' -f2 || true)
   if [[ "$bootloader_ver" == "" ]]; then
     echo "[-] Failed to identify bootloader version"
     abort 1
@@ -1141,8 +1141,8 @@ DEVICE=$(get_device_codename "$INPUT_DIR/system/build.prop")
 DEVICE_FAMILY="$(jqRawStrTop "device-family" "$CONFIG_FILE")"
 VENDOR=$(get_vendor "$INPUT_DIR/system/build.prop")
 VENDOR_DIR="$(jqRawStrTop "aosp-vendor-dir" "$CONFIG_FILE")"
-RADIO_VER=$(get_radio_ver "$INPUT_DIR/radio")
-BOOTLOADER_VER=$(get_bootloader_ver "$INPUT_DIR/radio" "$DEVICE")
+RADIO_VER=$(get_radio_ver "$INPUT_DIR")
+BOOTLOADER_VER=$(get_bootloader_ver "$INPUT_DIR")
 BUILD_ID=$(get_build_id "$INPUT_DIR/system/build.prop")
 if [[ "$EXTRA_IMGS_LIST" != "" ]]; then
   readarray -t EXTRA_IMGS < <(echo "$EXTRA_IMGS_LIST")
