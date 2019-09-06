@@ -103,7 +103,7 @@ get_radio_ver() {
 
 get_bootloader_ver() {
   local bootloader_ver=""
-  bootloader_ver=$(basename "$1"/bootloader-*.img | cut -d"." -f1 | cut -d"-" -f3- || true)
+  bootloader_ver=$(basename "$1"/bootloader-*.img | awk -F"bootloader-$2-" '{print $2}' | awk -F".img" '{print $1}' || true)
   if [[ "$bootloader_ver" == "" ]]; then
     echo "[-] Failed to identify bootloader version"
     abort 1
@@ -1142,7 +1142,7 @@ DEVICE_FAMILY="$(jqRawStrTop "device-family" "$CONFIG_FILE")"
 VENDOR=$(get_vendor "$INPUT_DIR/system/build.prop")
 VENDOR_DIR="$(jqRawStrTop "aosp-vendor-dir" "$CONFIG_FILE")"
 RADIO_VER=$(get_radio_ver "$INPUT_DIR/radio")
-BOOTLOADER_VER=$(get_bootloader_ver "$INPUT_DIR/radio")
+BOOTLOADER_VER=$(get_bootloader_ver "$INPUT_DIR/radio" "$DEVICE")
 BUILD_ID=$(get_build_id "$INPUT_DIR/system/build.prop")
 if [[ "$EXTRA_IMGS_LIST" != "" ]]; then
   readarray -t EXTRA_IMGS < <(echo "$EXTRA_IMGS_LIST")
