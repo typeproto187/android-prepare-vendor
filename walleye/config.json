@@ -457,6 +457,6 @@
         "    ro.facelock.rec_timeout=3500 \\",
         "    ro.facelock.est_max_time=600"
       ]
-    }
+     }
   }
 }
