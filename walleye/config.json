@@ -545,7 +545,7 @@
         "    ro.oem_unlock.pst=/dev/block/platform/soc/1da4000.ufshc/by-name/misc \\",
         "    ro.oem_unlock.pst_offset=6144"
       ],
-      "vendor-skip-files": []?,
+      "vendor-skip-files": [],
     }
   },
 }
