@@ -804,6 +804,6 @@
           "lib64/camera.device@3.5-external-impl.so",
           "lib64/camera.device@3.5-impl.so"
         ]
-      }
+    }
   }
 }
