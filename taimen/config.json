@@ -641,7 +641,6 @@
         "system/framework/embmslibrary.jar",
         "system/framework/ethernet-service.jar",
         "system/framework/hid.jar",
-        "system/framework/ims-common.jar",
         "system/framework/input.jar",
         "system/framework/javax.obex.jar",
         "system/framework/locksettings.jar",
