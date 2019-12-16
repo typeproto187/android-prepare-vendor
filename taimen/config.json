@@ -577,7 +577,7 @@
         "    ro.setupwizard.rotation_locked=true \\",
         "    setupwizard.enable_assist_gesture_training=true \\",
         "    ro.setupwizard.esim_cid_ignore=00000001 \\",
-        "    setupwizard.theme=glif_v2_light \\",
+        "    setupwizard.theme=glif_v2_light \\"
       ],
       "vendor-skip-files": []
     }
