@@ -640,7 +640,6 @@
         "system/framework/dpm.jar",
         "system/framework/embmslibrary.jar",
         "system/framework/ethernet-service.jar",
-        "system/framework/ext.jar",
         "system/framework/framework.jar",
         "system/framework/hid.jar",
         "system/framework/ims-common.jar",
