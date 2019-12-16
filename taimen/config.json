@@ -127,7 +127,6 @@
         "system/etc/permissions/features-verizon.xml",
         "system/etc/permissions/obdm_permissions.xml",
         "system/etc/permissions/privapp-permissions-google.xml",
-        "system/etc/permissions/vzw_mvs_permissions.xml",
         "system/etc/sysconfig/pixel_2017_exclusive.xml",
         "system/etc/sysconfig/google_build.xml",
         "system/etc/sysconfig/google.xml",
@@ -551,7 +550,6 @@
       ],
       "system-other": [
         "system/etc/permissions/privapp-permissions-google.xml",
-        "system/etc/permissions/vzw_mvs_permissions.xml",
         "system/etc/sysconfig/google.xml",
         "system/etc/sysconfig/google_build.xml",
         "system/etc/sysconfig/google_vr_build.xml",
