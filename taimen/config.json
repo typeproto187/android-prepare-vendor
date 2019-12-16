@@ -541,7 +541,7 @@
       "vendor-skip-files": []
     },
     "full": {
-      "overlays-dir": "system/product/overlay",
+      "overlays-dir": "qq1a.191205.008/factory_imgs_repaired_data/system/product/overlay",
       "system-bytecode": [
         "system/product/app/arcore/arcore.apk",
         "system/product/app/CalculatorGooglePrebuilt/CalculatorGooglePrebuilt.apk",
