@@ -627,8 +627,7 @@
         "system/product/priv-app/TurboPrebuilt/TurboPrebuilt.apk",
         "system/product/priv-app/Velvet/Velvet.apk",
         "system/product/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk",
-        "system/product/priv-app/WellbeingPrebuilt/WellbeingPrebuilt.apk",
-        "system/product/priv-app/WfcActivation/WfcActivation"
+        "system/product/priv-app/WellbeingPrebuilt/WellbeingPrebuilt.apk"
       ],
       "system-other": [
         "system/product/etc/ambient/matcher_tah.leveldb",
