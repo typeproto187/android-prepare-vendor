@@ -654,7 +654,6 @@
         "system/framework/sm.jar",
         "system/framework/svc.jar",
         "system/framework/telecom.jar",
-        "system/framework/telephony-common.jar",
         "system/framework/uiautomator.jar",
         "system/framework/vendor.qti.qcril.am-V1.0-java.jar",
         "system/framework/voip-common.jar",
