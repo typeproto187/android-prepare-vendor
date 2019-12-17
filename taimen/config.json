@@ -541,9 +541,8 @@
       "vendor-skip-files": []
     },
     "full": {
-      "overlays-dir": "qq1a.191205.008/factory_imgs_repaired_data/system/product/overlay",
+      "overlays-dir": "",
       "system-bytecode": [
-        "system/app/BasicDreams/BasicDreams.apk",
         "system/app/Bluetooth/Bluetooth.apk",
         "system/app/BluetoothMidiService",
         "system/app/BookmarkProvider/BookmarkProvider.apk",
