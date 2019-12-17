@@ -656,7 +656,6 @@
         "system/framework/telecom.jar",
         "system/framework/uiautomator.jar",
         "system/framework/vendor.qti.qcril.am-V1.0-java.jar",
-        "system/framework/voip-common.jar",
         "system/framework/vr.jar",
         "system/framework/wifi-service.jar",
         "system/priv-app/BackupRestoreConfirmation/BackupRestoreConfirmation.apk",
