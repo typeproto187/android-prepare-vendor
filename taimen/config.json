@@ -543,9 +543,6 @@
     "full": {
       "overlays-dir": "",
       "system-bytecode": [
-        "system/app/BluetoothMidiService",
-        "system/app/LiveWallpapersPicker/LiveWallpapersPicker.apk",
-        "system/app/SimAppDialog/SimAppDialog.apk",
         "system/product/app/CalculatorGooglePrebuilt/CalculatorGooglePrebuilt.apk",
         "system/product/app/CalendarGooglePrebuilt/CalendarGooglePrebuilt.apk",
         "system/product/app/CalendarGooglePrebuilt/CalendarGooglePrebuilt.apk",
@@ -701,7 +698,7 @@
         "system/product/priv-app/SystemUIGoogle/SystemUIGoogle.apk",
         "system/product/priv-app/TetheringEntitlement/TetheringEntitlement.apk",
         "system/product/priv-app/TurboPrebuilt/TurboPrebuilt.apk",
-        "system/product/priv-app/Velvet/Velvet.apk",
+        "system/product/priv-app/Velvet/Velvet.apk::PRESIGNED",
         "system/product/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk",
         "system/product/priv-app/WellbeingPrebuilt/WellbeingPrebuilt.apk"
       ],
