@@ -544,9 +544,7 @@
       "overlays-dir": "",
       "system-bytecode": [
         "system/app/BluetoothMidiService",
-        "app/EasterEgg/EasterEgg.apk",
         "system/app/LiveWallpapersPicker/LiveWallpapersPicker.apk",
-        "system/app/SecureElement/SecureElement.apk",
         "system/app/SimAppDialog/SimAppDialog.apk",
         "system/product/app/CalculatorGooglePrebuilt/CalculatorGooglePrebuilt.apk",
         "system/product/app/CalendarGooglePrebuilt/CalendarGooglePrebuilt.apk",
