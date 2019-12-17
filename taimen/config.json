@@ -544,7 +544,6 @@
       "overlays-dir": "",
       "system-bytecode": [
         "system/app/BluetoothMidiService",
-        "system/app/BookmarkProvider/BookmarkProvider.apk",
         "system/app/BuiltInPrintService/BuiltInPrintService.apk",
         "system/app/CaptivePortalLogin/CaptivePortalLogin.apk",
         "system/app/CarrierDefaultApp/CarrierDefaultApp.apk",
