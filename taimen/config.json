@@ -543,7 +543,6 @@
     "full": {
       "overlays-dir": "",
       "system-bytecode": [
-        "system/app/Bluetooth/Bluetooth.apk",
         "system/app/BluetoothMidiService",
         "system/app/BookmarkProvider/BookmarkProvider.apk",
         "system/app/BuiltInPrintService/BuiltInPrintService.apk",
