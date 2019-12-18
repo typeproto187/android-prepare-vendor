@@ -580,7 +580,6 @@
         "system/product/framework/libhwinfo.jar",
         "system/product/priv-app/AmbientSensePrebuilt/AmbientSensePrebuilt.apk::PRESIGNED",
         "system/product/priv-app/AndroidAutoStubPrebuilt/AndroidAutoStubPrebuilt.apk",
-        "system/product/priv-app/AndroidMigratePrebuilt/AndroidMigratePrebuilt.apk",
         "system/product/priv-app/AppDirectedSMSService/AppDirectedSMSService.apk",
         "system/product/priv-app/CarrierServices/CarrierServices.apk",
         "system/product/priv-app/CarrierSettings/CarrierSettings.apk",
